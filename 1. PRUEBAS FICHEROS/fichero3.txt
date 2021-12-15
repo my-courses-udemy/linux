@@ -1,0 +1,26 @@
+# sobreescribe fichero3.txt, o lo crea si no existe
+# cmd: cat fichero1.txt fichero2.txt > fichero3.txt
+1. patatas
+2. peras
+3. ciruelas
+4. molocotón
+5. coliflor
+6. pizza
+1. Paella
+2. Cocido
+3. Cordero
+4. Pollo asado
+5. Helado
+# cmd: cat fichero1.txt fichero2.txt >> fichero3.txt
+# respeta lo q habia y lo añade por debajo
+1. patatas
+2. peras
+3. ciruelas
+4. molocotón
+5. coliflor
+6. pizza
+1. Paella
+2. Cocido
+3. Cordero
+4. Pollo asado
+5. Helado

@@ -1,0 +1,66 @@
+- Por defecto no se pueden ejecutar dos comandos a la vez
+- Background: Parametro &
+- Pausar el comando: ctrl + Z
+- Enviar al BG: bg %[#trabajo]
+- Problema: No mantiene los trabajos si se cierra la consola
+
+NOHUP: Protege el proceso
+	- Redirige la salida standar a nohup.out
+	- No podemos recuperarlo en el FG(Primer plano)
+	- Sirve para que cuando cerremos la ventana, poder mantener el proceso en segundo plano con vida
+	nohup sleep 345 &
+
+DISOWN: es igual que nohup, pero gestionando trabajos
+	- Solucion: Usar screen y screen dr
+	- No podemos recuperar al BG (Segundo plano)
+	diswon %[# trabajo]
+
+
+SLEEP: espera la consola
+	sleep 5: espera 5 seg
+	sleep &: genera 
+		[1]: id de trabajo
+		5656: id de proceso
+
+FG: primer plano
+	fg %[# trabajo]
+	fg %1: traemos al primer plano este proceso
+	
+BG: segundo plano
+	- Primero: hacemos ctrl + z, para pausarlo
+	bg %2: lo mandamos al segundo plano
+
+JOBS: muestra los trabajos 
+
+
+
+
+GESTION DE PROCESOS
+	Cada proceso tiene PID (identificador)
+	Los procesos se comunican por señales
+	
+	SIGHUP, valor 1: cuando cerramos una ventana que tiene muchos procesos corriendo
+	SIGINT, valor 2: hacer un ctrl + c en terminal
+	SIGKILL, valor 9: se usa cuando el proceso no responde (forzar)
+	SIGTERM, valor 15: la mejor forma de cerrar un proceso sin dejar datos en memoria
+	
+	SINTAXIS: kill [-valor] [nombre de proceso - PID]
+	
+	KILLALL:	mata multiples procesos
+			consideraciones: puede matar el proceso para todos los usuarios
+	PKILL: es killall en esteroides
+		sintaxis: pkill [patron de nombre]
+		consideraciones: puede matar el proceso para todos los usuarios
+	PGREP: muestra el PID de los procesos en base a un patron
+		pgrep -a [patron]
+		
+	PRIORIZAR PROCESOS
+	- CPU gestiona la prioridad de los procesos
+	- Nice: termina para referir la prioridad
+		- Nice mide en valores de -20 a 19, siendo 0 un valor por defecto
+			Mayor prioridad: -20
+			Menor prioridad: 19
+		- Sintaxis: nice [-valor]
+		Renice: Cambiar la prioridad
+			sintaxis: renice [valor] -p PID
+		- Solo root puede hacer mas prioritario un proceso

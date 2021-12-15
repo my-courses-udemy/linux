@@ -1,0 +1,4 @@
+cd downloads ; ls: Ejecuta el primer comando, y si falla continua ejecutando el segundo
+cd downloads && ls; si falla el primer comando no ejecuta el segundo
+cat archivo: para leer el archivo
+

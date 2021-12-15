@@ -1,0 +1,42 @@
+RESUMEN DE ESTRUCTURA DE FICHEROS
+	/bin:	comandos binarios esenciales de usuario
+	/boot:	archivos estaticos de selector de arranque
+	/dev:	archivos de unidades
+	/etc:	configuracion del sistema de host especifico
+	/home:	directorio home de usuario
+	/lib:	librerias esenciales compartidas y modulos de kernel
+	/media: punto de montaje para medios removibles
+	/mnt:	punto de montaje temporal para sistema de archivos
+	/opt:	agregado de paquetes de software y aplicaciones
+	/sbin:	binarios de sistema
+	/srv:	datos para los servicios provistos por este sistema
+	/tmp:	archivos temporales
+	/usr:	utilidades y aplicaciones de multi-usuario
+	/var:	variables de archivo
+	/root:	directorio home del usuario root
+	/proc:	documentacion del sistema de archivos virtual del kernel
+
+CAMBAIR DE RUNLEVEL
+	runlevel: ver en q level estamos
+	telinit nro: podemos cambiar del 0 al 6
+	0 Apagar o detener el sistema
+	1 Modo de usuario unico, normalmente tiene el alias de 5
+	3 Multiuser cli
+	5 Multiuser GUI
+	6 Reiniciar el sistema
+	
+	/etc cambiar el runlevel por defecto
+
+BOOT TARGETS
+	poweroff	-------------- 0
+	rescue		-------------- 1
+	Multi-user	-------------- 3
+	graphical	-------------- 5
+	reboot		-------------- 6
+	
+	Systemctl isolate graphical.target: Reiniciar la interfaz grafica
+	Systemctl get-dafeault: saber Cual es el boot target por defecto
+	Systemctl set-default graphical.target: definir por defecto el boot target
+	systemctl list-units --type=target: listar los targets
+
+

@@ -1,0 +1,27 @@
+CAT
+cat file1.txt file2.txt: muestra a los archivos uno debajo del otro
+cat file1.txt file2.txt > file3.txt: sino existe file3 lo crea y pone el contenido de file1 y file2 en el
+cat file1.txt file2.txt >> file3.txt: escribe el contenido de file1 y file2 debajo del contenido existente de file3
+
+HEAD
+head file1.txt: muestra las primeras 10 lineas
+head -n 20 file.txt: muestra la cantidad de las 20 primeras lineas
+
+TAIL
+tail file1.txt: muestra las ultimas 10 lineas
+tail -n 20 file: muestra las ultimas 20 lineas
+
+SPLIT
+split -10 texto.txt: divide texto.txt en archivos de 10 lineas
+
+PASTE
+paste fichero1.txt fichero2.txt: pone a ambos lados los 2 archivos para comparar
+
+JOIN
+join fichero1.txt fichero2.txt: los muestra en base a un factor comun
+
+SED
+sed 's/Mancha/mancha/g' PruebaSed.txt > PruebaSed.txt: busca en todo el archivo 'Mancha' y lo reemplaza por 'mancha' y con > lo guardamos
+sed 's/[Eeé]l/ella/g' PruebaSed.txt: cambia 'el, El o él' por 'ella' de forma global
+
+

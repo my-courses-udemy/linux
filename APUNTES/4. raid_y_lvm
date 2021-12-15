@@ -1,0 +1,45 @@
+	
+RAID
+	Acronimo: Redundant Array of Independent Disks
+	Niveles de raid: 0,1,2,3,4,5 5E, 6, 6E
+	RAID's combinados: 0+1, 1+0, 30, 100, 10+1
+	RAID 0: Sirve para almacenar algo que no es critico.
+		pros:
+		- alto rendimiento
+		- rapido escribiendo y leyendo
+		- maximo aprovechamiento de almacenaje
+		contras:
+		- no tiene tolerancia a fallos
+		escenario:
+		- almacenamiento no importante
+	RAID 1: La informacion se guarda en ambos discos (respaldo)
+		pros:
+		- rapido leyendo
+		- tolerancia a fallo
+		contras:
+		- poco almacenaje
+		- no ganamos velocida
+		- costo elevado
+		escenario:
+		- para almacenar bases de datos
+	RAID 5: Diseñado para ofreccer el nivel de rendimiento de RAID 0, añade un disco demas para poder hacerlo tolerante a fallos, tolerancia a perder 1 disco
+		pros:
+		- rapido leyendo y escribiendo
+		- tolerancia a fallos
+		contras: 
+		- perdemos 1 disco para almacenaje
+		- deberia usarse RAID 6
+		esceneario:
+		- para almacenar aplicaciones
+	RAID 6:
+	
+LVM
+	Acronimo: Logical volumen manager
+	pros:
+	- flexible
+	- "tolerancia a fallos"
+	contras:
+	- coste elevado
+	esceneario:
+	- vale para todo
+	

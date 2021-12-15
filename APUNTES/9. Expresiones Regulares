@@ -1,0 +1,31 @@
+EXPRESIONES REGULARES
+
+GREP
+	- Herramienta muy usada e importante
+	- Expresiones regulares basica
+		grep Quijote libro.txt
+		cat libro.txt | grep Quijote
+		
+		Ejemplo expresion regular: grep ^Palabra Quijote.txt
+
+	- Principio de linea:
+		grep ^hola texto.txt
+		grep ^d texto.txt 
+	- Final de la linea:
+		grep fin$ texto.txt
+		grep 'obra, $' texto.txt
+	- Comodin para un caracter
+		grep ..la texto.txt   Ej: Hola, cola, etc
+		grep ..la texto.txt
+		grep ^.e texto.txt: al principio cualquier que empieze con cualquier caracter seguido de la letra 'e'
+	- Rangos
+		grep '^[a-m]' texto.txt: busca lo q inicie por la a-m (hasta la)
+		
+	- Operador "o"
+		grep '^[H|h]' texto.txt: lo que empieze por H o h
+		
+	egrep '^[a-m]' texto.txt:  todas las lineas que empiezen con a-m
+	egrep '^(H|h)' texto.txt: todas las lineas que empiezen por H o h
+FGREP	
+	- Igual que grep pero sin evaluar ninguna expresion regular, lo toma todo como texto
+	fgrep ':)' texto.txt 

@@ -1,0 +1,20 @@
+STDOUT >
+	ls > ls.txt: redirige lo que vote ls a un archivo txt
+
+STDERR 2>
+	lss 2> error.txt: redirige el error a error.txt
+
+Ejemplo:
+	gzip < error.txt > error.gz
+
+
+TUBERIAS:
+PIPE |
+	ps aux | grep python3: busca entre los procesos, al q tenga 'python3'
+
+XARG
+	ls | xargs cat
+
+TEE
+	echo "hola" | tee hola.txt: crea el archivo, y nos muestra 'hola'
+

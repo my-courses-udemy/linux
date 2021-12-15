@@ -1,0 +1,28 @@
+ARCHIVADO
+El archivado no es igual a la comprension, pero van de la mano
+- Almacenar de uno o mas archivos y carpetas en un unico archivo
+- Permite la transferencia mas comoda a otro dispositivo
+- Archivado amigo de la comprension
+- Comandos: dd, tar, cpio
+
+DD
+comando muy utilizado en linux, trabaja a bajo nivel
+sintaxis:
+	dd if=[input file] of=[output file][blick size]
+	dd if=/dev/sda1 of=/home/Carlos/bakcup bs=4k
+	dd if=./1.\ Elemento\ Archivado.txt of=copia/2.\ copia: copiamos el contenido de 'if' a 'of', creado el archivo copia
+
+TAR
+Tar trabaja a nivel de File System y no bloque
+sintaxis:
+	tar -cvf [OutputFile.tar][input file/path]: Empaquetado
+	tar -xvf [archivos.tar]: Desempaquetado
+	tar -cvf 2.\ Archivo.tar 2.\ Fichero\ Tar.txt: comprimimos el archivo 2.\ Fichero\ Tar.txt en 2.\ Archivo.tar en la misma carpeta
+	tar -xvf ../2.\ Archivo.tar: descomprimir un archivo en una ubicacion especifica	
+
+CPIO 
+Menos flexible, necesitap ipe como input y redirigir output a fichero
+sintaxis:
+	ls | cpio -ov > archivo.cpio: Empaquetado
+	cpio -idv < archivo.cpi: Desempaquetado
+Concejo: find como input es muy potente

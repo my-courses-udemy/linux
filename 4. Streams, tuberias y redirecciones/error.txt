@@ -1,0 +1,21 @@
+
+Command 'lss' not found, did you mean:
+
+  command 'lsd' from snap lsd (0.16.0)
+  command 'lrs' from deb lrslib (0.70-3)
+  command 'lsm' from deb lsm (1.0.4-1)
+  command 'lssu' from deb nilfs-tools (2.2.8-1)
+  command 'lvs' from deb lvm2 (2.03.07-1ubuntu1)
+  command 'lsh' from deb lsh-client (2.1-12build3)
+  command 'less' from deb less (551-1ubuntu0.1)
+  command 'ss' from deb iproute2 (5.5.0-1ubuntu1)
+  command 'ls' from deb coreutils (8.30-3ubuntu2)
+  command 'lsc' from deb livescript (1.6.0+dfsg-1)
+  command 'lsw' from deb suckless-tools (44-1)
+  command 'lsns' from deb util-linux (2.34-0.1ubuntu9.1)
+  command 'les' from deb atm-tools (1:2.5.1-4)
+  command 'ass' from deb irpas (0.10-7)
+  command 'gss' from deb libgss-dev (1.0.3-4)
+
+See 'snap info <snapname>' for additional versions.
+

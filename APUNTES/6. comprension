@@ -1,0 +1,22 @@
+COMPRENSION
+Es muy importante
+	- Ahorro de costes
+	- Ahorro de tiempo
+	- Maximiza el almacenaje
+Amigo intimo de la comprension (LINUX)
+Comandos:
+
+GZIP
+	gzip -v fichero1.txt: comprimir uno o muchos archivos	
+	gunzip fichero1.txt.gz QuijoteMancha.txt.gz: descomprimir uno o muchos archivos
+
+BZIP2
+	bzip2 -v QuijoteMancha.txt fichero1.txt: comprimir uno o muchos archivos
+	bunzip2 fichero1.txt.bz2 QuijoteMancha.txt.bz2: descomprimir uno o mas archivos
+
+PRIMERO HACER EMPAQUETACION LUEGO COMPRIMIRLO
+	tar -zcvf compridos.tar.gz carpeta_a_comprimir/: comprimir
+	tar -zxvf ../compridos.tar.gz: descomprimir
+	
+	tar -jcvf comprimido_bz2.tar.bz2 carpeta_a_comprimir/: comprimir
+	tar -jxvf ../comprimido_bz2.tar.bz2: descomprimir

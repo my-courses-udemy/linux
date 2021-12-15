@@ -1,0 +1,5 @@
+3. Cordero
+4. Pollo asado
+5. Helado
+# cmd: cat fichero1.txt fichero2.txt >> fichero3.txt
+# respeta lo q habia y lo añade por debajo
